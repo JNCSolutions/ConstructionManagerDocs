@@ -1,0 +1,103 @@
+---
+layout: default
+title: Planner
+---
+<div class="jumbotron">
+  <p class="lead">This module acts as an editable planner to organise your employees, subcontractors and heavy equipment rental.</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-12">
+
+    <h3>Contents</h3>
+
+    <ul class="table-of-contents">
+      <li><a href="#nagivation">Navigation</a></li>
+      <ul>
+        <li><a href="#navigation-sections">Sections</a></li>
+        <li><a href="#navigation-timeline">Timeline</a></li>
+      </ul>
+      <li><a href="#appointments">Creating, Editing &amp; Deleting Appointments</a></li>
+      <ul>
+        <li><a href="#appointments-creation">Appointment Creation</a></li>
+        <li><a href="#appointments-editing">Appointment Editing</a></li>
+        <li><a href="#appointments-deletion">Appointment Deletion</a></li>
+      </ul>
+    </ul>
+  </div>
+
+  <div id="navigation" class="col-lg-12">
+    <h3>Navigation</h3>
+
+    <p>
+      Once you have logged in with your company email address and password at http://constructionmanager.net/ you will reach the start page. To access the planner, click the 'Planner' button on the row of options along the top, in blue. This will open the following page:
+      <br><br>
+      <img src="img/planner.png" style="width: 100%;">
+    </p>
+
+    <h4 id="navigation-sections">Sections</h4>
+
+    <p>There are three sections down the <b>vertical axis</b> on the left: Employees, Subcontractors and Plant. To hide a section, simply click on the blue header line for that section.</p>
+
+    <h4 id="navigation-timeline">Timeline</h4>
+
+    <p>Dates are arranged chronologically along the <b>horizontal axis</b> at the top. The timescale can be changed either by clicking on the preset 'Month', 'Week' or 'Day' buttons (under 'Contracts'), or by toggling the 'Time to Scale' slider.</p>
+    
+    <p>To move through dates, there are three different options:
+      <ol>
+        <li>Click and drag the timeline (date headings).</li>
+        <li>Jump days/weeks using the arrow buttons on the top left.</li>
+        <li>Choose a specific date using 'Go To Date' button.</li>
+      </ol>
+    </p>
+    <h4 id="navigation-filters">Filters</h4>
+    
+    <p>The filters above the timeline can also be used to quickly search through the rows to find the relevant entry. It is important to note that <b>multiple selections can be input into the filter</b>.</p>
+  </div>
+
+  <div id="appointments" class="col-lg-12">
+    <h3>Creating, Editing &amp; Deleting Appointments</h3>
+
+    <h4 id="appointments-creation">Appointment Creation</h4>
+
+    <p>To create an appointment in the planner, click in the row at time where you want the entry to start, and then drag to where you want it to finish. This then opens the 'Create New Appointment' window, where you can choose whether the entry relates to a contract (1) or a maintenance job (2). If you accidentally pick job from the wrong dropdown list, just click on that dropdown again and select the blank row at the top.</p>
+
+    <p>1. If you pick a <b>contract</b>, just fill in the 'Instructions' box with the information you want to appear in the entry. Then click Save and the appointment will be generated in a purple box.</p>
+
+    <p>2. If you pick a <b>maintenance job</b>, as well as filling out 'Instructions' for the appointment, a status can be set for it. Also, a 'Visit Ref' is automatically generated when the appointment is saved.</p>
+
+    <p>Maintenance job appointments are created in a green block, and having 'Waiting Periods'. These are periods over which the appointment is due (during which the block turns amber). When the due period has passed, the block turns red. The period can be set in the Construction Manager program on your computer under Settings > Defaults > Maintenance tab > Planner appointment due warn (hours).</p>
+
+    <h4 id="appointments-editing">Appointment Editing</h4>
+   
+    <p>To change the time slot of the planner entry, you can either click and move either side of the block (which resizes the block), or click the block in the middle and drag it to the correct time slot.</p>
+    
+    <p>To change the person that the appointment is assigned to, click the block and drag it onto the correct row. You will then be asked if you want to change the visit reference number.</p>
+
+    <p>To edit the details in the appointment, simply double-click the appointment block and the 'Edit Appointment' window will appear.</p>
+
+    <h4 id="appointments-deletion">Appointment Deletion</h4>
+      
+    <p>To delete an entry, right-click on the entry and click 'delete'.</p>
+    
+    <h3>Options</h3>
+    
+    <p>The 'Options' button opens a window with a list of options, explained below. There are three tabs: General, Job Display and M-Job Display.</p>
+    <h4>Row Scale</h4>
+    
+    <p>The row scale slider determines the height of each row and, thereby, the height of the appointment blocks.</p>
+    
+    <h4>Compress Unworked hours</h4>
+    
+    <p>This tickbox allows you to choose whether or not nights and weekends (or whatever times are not counted 'Work Hours') are shown on the timeline. The day start and end can be set in Construction Manager in Settings > Defaults > Maintenance tab.</p>
+    
+    <h4>Timeline Skip Days Per Week</h4>
+    
+    <p>Chooses how many days to skip forward when clicking the 'Week' forward and backward arrow buttons.</p>
+    
+    <h4>Use Payroll Employeees</h4>
+    
+    <p>Option for whether or not to use the employees that have been set up in Sage Payroll</p>
+    
+  </div>
+</div>

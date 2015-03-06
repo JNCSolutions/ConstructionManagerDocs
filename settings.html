@@ -1,0 +1,67 @@
+---
+layout: default
+title: Settings
+---
+
+<div class="jumbotron">
+  <p class="lead">You can access the settings page by clicking the cog icon (<i class="fa fa-cog"></i>) on the top right of the screen.</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-12">
+
+    <h3>Contents</h3>
+
+    <ul class="table-of-contents">
+      <li><a href="#account">Account Settings</a></li>
+      <li><a href="#database">Database Settings</a></li>
+      <li><a href="#mailtemplates">Email Templates</a></li>
+    </ul>
+  </div>
+
+  <div id="account" class="col-lg-12">
+    <h3>Account Settings</h3>
+
+    <p>You can change your password by entering your current password, new password, and your new password once more to confirm.</p>
+
+    <p>It is important that your password is unique, and complex enough to prevent guessing. Google has some <a target="_blank" href="http://www.google.co.uk/intl/kn/goodtoknow/online-safety/passwords/">good advice on picking a good password</a>.</p>
+  </div>
+
+  <div id="database" class="col-lg-12">
+    <h3>Database Settings</h3>
+
+    See <a href="externalservices.html#cm50">Connecting to Construction Manager 50</a>.
+  </div>
+
+  <div id="mailtemplates" class="col-lg-12">
+    <h3>Email Templates</h3>
+
+    <p>Construction Manager makes it easy to send reports and invoices, individually or in bulk, to a large number of your clients and customers. Because it's important that your emails are properly presented, you can supply a set of templates to be used by the bulk mailer.</p>
+
+    <p>To access the mail settings, click on the cog icon at the top right of Construction Manager, and select `Email Templates`.</p>
+
+    <p>Simply enter your message body, default `to` and `cc` fields, and Construction Manager will handle the rest when it is time to send your mails.</p>
+
+    <h4>To, CC and BCC</h4>
+
+    <p>As well as `to` addresses, you can also specify addresses for `cc` or `bcc`. The `to` addresses can be selected from the recipient company's registered email addresses. The `cc` and `bcc` addresses can be filled in by hand.</p>
+
+    <h4>Placeholders</h4>
+
+    <p>You can add a personal touch to your email templates with our placeholders. If you want a value from your customer records to appear in your mail body, simply add one of these values to your template where you want it to appear:</p>
+
+    
+    <code><pre>%COMPANY_NAME%       The name of the recipient company
+%CONTACT_NAME%       The name of the human listed as the company's main contact</pre></code>
+
+    <p>For example:</p>
+
+    <code><pre>Dear %CONTACT_NAME%,
+
+Attached to this email is the invoice for our recently completed work.
+
+Kind regards,
+Joe Bloggs
+Bloggs Construction Ltd.</pre></code>
+  </div>
+</div>
