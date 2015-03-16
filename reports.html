@@ -9,6 +9,26 @@ title: Reports
 
 <div class="row marketing">
   <div id="a" class="col-lg-12">
-    Construction Manager uses the power of Stimulsoft Reports.Fx to allow you to easily create meaningful and flexible reports for any need.
+    <p>Construction Manager uses the power of Stimulsoft Reports.Fx to allow you to easily create meaningful and flexible reports for any need. They have extensive documentation available <a href="http://www.stimulsoft.com/en/documentation/online/user-manual/" target="_blank">here</a>, but here is some extra information that you may find useful.</p>
+
+    <h3>Data Sources</h3>
+
+    <p>In most cases, a report will have two connections: <strong>Web</strong> and <strong>Desktop</strong>. In most cases, these connections will be handled for you. <strong>Data Sources</strong> in the report must belong to either of these connections, depending on where the you want to access lives. Data sources that pull data from the CM50 database should have their names prefixed with <strong>Dt</strong> to ensure that they pull data from the correct connection.</p>
+
+    <h3>Formatting</h3>
+
+    <p>If you have a set of data that you want to display without gaps for missing fields, such as an address, the following format must be used:</p>
+
+    <p>If you want an address with empty fields to show without any gaps, you have to use the following format:</p>
+
+	{% highlight ruby %}
+	{IIF(Variable1, Variable1 + "\n", "")}{IIF(Variable2, Variable2 + "\n", "")}{IIF(Variable3, Variable3 + "\n", "")}
+	{% endhighlight %}
+
+	<p>For example, this format string will print out the address of a quote, but will not leave an empty line if an address field is blank:</p>
+
+	{% highlight ruby %}
+	{IIF(QuoteDetails.address_1, QuoteDetails.address_1 + "\n", "")}{IIF(QuoteDetails.town, QuoteDetails.town + "\n", "")}{IIF(QuoteDetails.region, QuoteDetails.region + "\n", "")}{IIF(QuoteDetails.postcode, QuoteDetails.postcode + "\n", "")}
+	{% endhighlight %}
   </div>
 </div>
