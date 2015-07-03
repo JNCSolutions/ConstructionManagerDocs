@@ -3,12 +3,10 @@ layout: default
 title: Quotes
 ---
 
-<div class="jumbotron">
-  <p class="lead">Create, modify and manage your quotes.</p>
-</div>
-
 <div class="row marketing">
   <div class="col-lg-12">
+
+    <p class="lead">Create, modify and manage your <a href="https://constructionmanager.net/quotes">quotes</a>.</p>
 
     <h3>Contents</h3>
 
@@ -18,9 +16,11 @@ title: Quotes
       <ul>
         <li><a href="#details-tab">Details</a></li>
         <li><a href="#items-tab">Items</a></li>
+        <li><a href="#terms-tab">Terms</a></li>
         <li><a href="#analysis-tab">Analysis</a></li>
         <li><a href="#notes-tab">Notes</a></li>
       </ul>
+      <li><a href="#ordering-a-quote">Ordering a Quote</a></li>
       <li><a href="#invoicing-a-quote">Invoicing a Quote</a></li>
     </ul>
   </div>
@@ -28,13 +28,24 @@ title: Quotes
   <div id="the-quotes-list" class="col-lg-12">
     <h3>The Quotes List</h3>
 
-    <p>The quotes list displays all of your current quotes in a paginated, filterable list. From this list, you can go on to create a new quote, edit an existing one, print, email or export the list to an excel spreadsheet. Clicking new or choosing to edit an existing quote will take you to the quote screen.</p>
+    <p>The quotes list displays all of your current quotes in a paginated, filterable list. From this list, you can:</p>
+
+    <p>
+      <ul>
+        <li>Create a new quote</li>
+        <li>Edit existing quotes</li>
+        <li>Delete quotes</li>
+        <li>Print quotes</li>
+        <li>Email quotes</li>
+        <li>Export the list as a spreadsheet</li>
+      </ul>
+    </p>
   </div>
 
   <div id="the-quote-screen" class="col-lg-12">
     <h3>The Quote Screen</h3>
 
-    <p>The quote screen has four tabs: <strong>Details</strong>, <strong>Items</strong>, <strong>Analysis</strong> and <strong>Notes</strong>.</p>
+    <p>The quote screen has five tabs: <strong>Details</strong>, <strong>Items</strong>, <strong>Terms</strong>, <strong>Analysis</strong> and <strong>Notes</strong>.</p>
 
     <h4 id="details-tab">Details</h4>
 
@@ -43,6 +54,10 @@ title: Quotes
     <h4 id="items-tab">Items</h4>
 
     <p>The items tab contains the meat of the quote. Here you control the items that comprise the work itself. These items can either be inserted manually, or your sage products can be imported for use in constructionmanager.net.</p>
+
+    <h4 id="terms-tab">Terms</h4>
+
+    <p>Terms are similar to Items, except they do not have costs associated with them. The terms tab simply gives you access to products that have been marked as text items. Terms can then be displayed separately from the items on your quote reports.</p>
 
     <h4 id="analysis-tab">Analysis</h4>
 
@@ -61,9 +76,15 @@ title: Quotes
     <p>The notes tab contains a list of timestamped and signed notes associated with a quote.</p>
   </div>
 
+  <div id="ordering-a-quote" class="col-lg-12">
+    <h3>Ordering a Quote</h3>
+
+    <p>When a quote is ready for progression, it can be attached to a new or existing contract. When a quote is attached, the values from the quote are then transferred to the contract. If you wish to detact a quote from a contract, that must be done through the <a href="contracts.html">Contracts</a> page.</p>
+  </div>
+
   <div id="invoicing-a-quote" class="col-lg-12">
     <h3>Invoicing a Quote</h3>
 
-    <p>When a quote is ready for invoicing, it can be attached to a new or existing contract and invoiced directly. Once a quote has been invoiced, it can no longer be re-assigned to a different contract.</p>
+    <p>Once a quote has been attached to a contract, it can be invoiced. This will create an invoice record in CM50, and optionally, in Sage. Once a quote has been invoiced, it can no longer be re-assigned to a different contract.</p>
   </div>
 </div>
