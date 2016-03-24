@@ -122,8 +122,12 @@ title: Quotes
 
     <p>Data to be entered on the items screen includes:
       <ul>
-        <li><b>Stock code:</b>        There is a choice of 2 codes: <b>M1</b>, which will create a message text line - all costs will be ignored.
-                                      Code <b>Text</b> will use costs to compile the quote. Pick a code from the drop-down list.</li>
+        <li><b>Stock code:</b>       Pick a code from the drop-down list - there are 3 types of code:</li> 
+        <ul>
+          <li><b>Code M1:</b>             This allows you to enter text in the description boxes, but no other data.</li>
+          <li>Code Text<b>Text</b         This allows you to enter text in the description boxes, plus any other data. </li>
+          <li>All other Codes<b>Text</b   This will pick up data from the prouct table (UOM, costs), which can then be over-written. </li>                           
+        </ul>                             
         <li><b>Description:</b>       Enter a short description.</li>
         <li><b>Long Description:</b>  Enter a longer description.</li>
         <li><b>Qty:</b>               Enter a quantity of the product being quoted.</li>
