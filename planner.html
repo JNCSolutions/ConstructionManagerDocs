@@ -4,19 +4,20 @@ title: Planner
 ---
 <div>
   <p>This module acts as an editable planner to organise your employees, subcontractors and heavy equipment rental.</p>
+  
 
   <h3>Contents</h3>
 
     <ul class="table-of-contents">
+      <li><a href="#introduction">Introduction</a></li>
       <li><a href="#setup">Setup</a></li>
       <ul>
         <li><a href="#setttings">Setttings</a></li>
-        <li><a href="#employees-subcontractors-plant">Employees, Sub-contractors and Plant</a></li>
-        <li><a href="#adding-custom-resources">Adding Custom Resources</a></li>
-        <li><a href="#filter-options
-        ">Filter Options</a></li>
+        <li><a href="#employees-subcontractors-plant">Employees, sub-contractors and plant</a></li>
+        <li><a href="#adding-custom-resources">Adding custom resources</a></li>
+        <li><a href="#filter-options">Filter options</a></li>
       </ul>
-      <li><a href="#screen-appearance">Screen Appearance and manipulation</a></li>
+      <li><a href="#screen-appearance">Screen appearance and manipulation</a></li>
       <ul>
         <li><a href="#time-scale-slider">Time scale slider</a></li>
         <li><a href="#go-to-date">Go to date</a></li>
@@ -25,26 +26,54 @@ title: Planner
       </ul>
       <li><a href="#creating-editing-appointments">Creating and editing appointments</a></li>
         <ul>
-        <li><a href="#create-edit-delete">Create, edit and delete appointments</a></li>
-        <li><a href="#moving-appointments">Moving appointments</a></li>
-        <li><a href="#copy-delete">Copy and delete appointments</a></li>
-        
-      </ul>
+          <li><a href="#create-edit-delete">Create, edit and delete appointments</a></li>
+          <li><a href="#moving-appointments">Moving appointments</a></li>
+          <li><a href="#copy-delete">Copy and delete appointments</a></li>
+        </ul>
     </ul>
-
-    <h3 id="navigation">Navigation</h3>
-
-    <p>
-      Once you have logged in with your company email address and password at http://constructionmanager.net/ you will reach the start page. To access the planner, click the 'Planner' button on the row of options along the top, in blue. This will open the following page:
+    <h3 id="introduction">Introduction</h3>
+    
+    
+       <p>To access the planner, click the 'Planner' button on the row of options along the top, in blue. 
+          This will open the following screen:</p>
       <br><br>
-      <img src="img/planner.png" style="width: 100%;">
-    </p>
+      <img src="img/Planner_List_01.png" style="width: 100%;">
+      <br>
+    
+    <h3 id="setup">Setup</h3>
+      <h4 id="settings">Settings</h4>
+        <p>There are 2 settings that need checking before Planner is implemented:</p>
+        <ul>
+          <li>Waiting periods (see below in "Creating appointments" - 
+              this is maintained in (old) Construction Manager under Settings > Defaults > Maintenance</li>
+          <li>Use Sage Payroll Employees - in (new) ConstuctionManager.Net under Settings > Connection settings.
+              Check this if you want to include employees from Sage payroll.</li>
+        </ul>
+        
+        <h4 id="employees-subcontractors-plant">Employees, subcontractors and plant</h4>
+        <br><br>
+        <img src="img/Planner_List_02.png" style="width: 100%;">
+        <br>
+        <p>These components of the Planning system appear down the left-hand side of the grid. They can be hidden and displayed by 
+            clicking on any of the 3 headings. For instance: if the user is planning sub-contractors, click on the employee heading to hide 
+            all employees. Click again and they will re-display. </p>
+            
+        <h4 id="adding-custom-resources">Adding custom resources</h4>
+        <br><br>
+        <img src="img/Planner_List_03.png" style="width: 100%;">
+        <br>
+        <p>Custom resources can be added by the user. 
+        This would typically occur where a syb-contractor emplys a number of labourers - 
+        each of these could be set up as a resource and planned individually.
+        Custom resources will appear on the left, beneath Plant.</p>
+   
+   
+   
+   
+   
+      <h3 Original stuff/h3>
 
-    <h4 id="navigation-sections">Sections</h4>
-
-    <p>There are three sections down the <b>vertical axis</b> on the left: Employees, Subcontractors and Plant. To hide a section, simply click on the blue header line for that section.</p>
-
-    <h4 id="navigation-timeline">Timeline</h4>
+    
 
     <p>Dates are arranged chronologically along the <b>horizontal axis</b> at the top. The timescale can be changed either by clicking on the preset 'Month', 'Week' or 'Day' buttons (under 'Contracts'), or by toggling the 'Time to Scale' slider.</p>
     
