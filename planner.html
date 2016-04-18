@@ -41,10 +41,15 @@ title: Planner
     <h3 id="setup">Setup</h3>
       <p>There are 3 settings that need checking before Planner is implemented:</p>
         <ul>
-          <li>Waiting periods (see below in "Creating appointments") - 
-              this is maintained in (old) Construction Manager under Settings > Defaults > Maintenance</li>
-          <li>Working days and ties can be set in (old) Construction Manager in Settings > Defaults > Maintenance.</li>
-          <li>Use Sage Payroll Employees - in (new) ConstuctionManager.Net under Settings > Connection settings.
+          <li>Employees - in Settings > Connection settings. Check this if you use Sage Payroll employees.  
+              If no employees are showing they will need setting up in Payroll or Construction Manager.  
+              Support can advise / assist with this.</li>
+          <li>Warning time periods (used with Maintenances Jobs and mobile manager) 
+              (see below in "Creating appointments") – go to login  Settings > Defaults > Maintenance</li>
+          <li>Working Period days and nights can be set in  Settings > Defaults > Maintenance. 
+              This enables the night period and weekend to be hidden to allow more space on the planner screen.  
+              The non-working period can be displayed by clicking  Options – Hide nightime / weekend hours. 
+              Use Sage Payroll Employees - in (new) ConstuctionManager.Net under Settings > Connection settings.
               Check this if you want to include employees from Sage payroll.</li>
         </ul>
         
@@ -57,10 +62,8 @@ title: Planner
         <br>
         <img src="img/Planner_List_03.PNG" style="width: 100%;">
         <br>
-        <p>You can (optionally) add Custom Resources. 
-        This would typically occur where a sub-contractor employs a number of labourers - 
-        each of these could be set up as a resource and planned individually.
-        Custom Resources will appear on the left, beneath Employees, Sub-contractors and Plant.</p>
+        <p>If you need to plan additional resources eg a gang of labour or multiple employees for one subcontractor you can use Custom Resources. - each of these could be set up as a resource and planned individually. 
+            Custom Resources will appear on the left, beneath Employees, Sub-contractors and Plant.</p>
         <br>
         <h4 id="month-week-day-view">Month, week, day view</h4>
         <p>You can elect to view the calendar either in Month, Week or Day view, using the appropriate tabs.</p>
@@ -73,14 +76,14 @@ title: Planner
         <img src="img/Planner_FilterOptions_01.PNG" style="width: 50%;">
         <br>
         <p>Use the check boxes to control which contracts are to viewed and hidden. 
-        You can also change the colour that is displayed with a contract - 
-        e.g. very important contracts could be changed to red.</p>
+        You can also change the colour that is displayed with a contract.
+        Normally all contracts or one contract are selected.</p>
         <br>
         <p>Employees, sub-contractors, plant and custom resources </p>
         <img src="img/Planner_FilterOptions_02.PNG" style="width: 50%;">
         <br>
         <p>Use the check boxes to control which records should be viewed and hidden. All 4 record types are controlled
-         in the same way.</p>
+         in the same way: i.e. Employees , Subcontractors , Plant , Custom Resources.</p>
         <br>
         <p>Skills </p>
         <img src="img/Planner_FilterOptions_03.PNG" style="width: 50%;">
@@ -139,20 +142,19 @@ title: Planner
         This then opens the 'Create New Appointment' window, where you can choose whether the entry relates to a contract (1) 
         or a maintenance job (2).</p>
 
-    <p>1. If a <b>contract</b> is picked, just fill in the 'Instructions' box with the information that is wanted to appear in the entry. 
-          Then click Save and the appointment will be generated in a purple box.</p>
+    <p>1. If a <b>contract</b> is picked, just click Save and the job will be planned in a purple box. 
+          If you want to add any notes enter these in the 'Instructions' box.</p>
 
-    <p>2. If a <b>maintenance job</b> is picked, as well as filling out 'Instructions' for the appointment, a status must be set for it. 
-          Also, a 'Visit Ref' is automatically generated when the appointment is saved.</p>
+    <p>2. If a <b>maintenance job</b> is picked, the status must be entered as a visit is created as well as a planner entry.  
+          If you are using <b>Mobile Manger</b> the instructions should be filled in and these are the instructions that go to the mobile phone.
+          Maintenance job appointments are created in a green block, and have 'Warning sustem'. 
+          The colour can be set to change to amber x hours before the start time. 
+          The time period is set in Settings > Defaults > Maintenance tab > Planner appointment due warn (hours).
+          When the start time has passed, the block turns red if the status has not been changed to "on site".
+          To edit the details in the appointment, simply double-click the appointment block 
+          and the 'Edit Appointment' window will appear. </p>
 
-    <p>Maintenance job appointments are created in a green block, and having 'Waiting Periods'. 
-        These are periods over which the appointment is due (during which the block turns amber).
-        When the due period has passed, the block turns red. 
-        The period can be set in the (old) Construction Manager program on your computer under 
-        Settings > Defaults > Maintenance tab > Planner appointment due warn (hours).</p>
-
-    <p>To edit the details in the appointment, simply double-click the appointment block and the 'Edit Appointment' window will appear.</p>
-    <br>
+        <br>
     <h4 id="moving-appointments">Moving and Re-assigning Appointments</h4>
     <p>To change the time slot of the planner entry, you can either click and move either side of the block (which resizes the block), 
     or click the block in the middle and drag it to the correct time slot.</p>
