@@ -122,19 +122,20 @@ title: Quotes
         <ul>
           <li><b>Code TEXT:</b>         For text entry, with prices. </li>
           <li><b>Code M1:</b>           For a message line only, with no prices.</li>
-          <li><b>Product Codes:</b>     This will pick up data from the product table (UOM, costs), which can then be over-written. </li>                           
+          <li><b>Product Codes:</b>     This will pick up data from the product table (Unit type, costs), which can then be over-written. </li>                           
         </ul>                             
         <li><b>Description:</b>       Enter a short description.</li>
-        <li><b>Long Description:</b>  Enter a longer description, if required.</li>
+        <li><b>Long Description:</b>  Enter a longer description, if required.
+                                      This will display under the short description on a printed report.</li>
         <li><b>Qty:</b>               Enter a quantity of the product being quoted.</li>
         <li><b>Unit type:</b>         Enter a unit of measure (e.g. NO, Each, Kgs, Days etc.).</li>
         <li><b>Cost price (£):</b>    (Optional) Enter a cost price. This can be used either with the margin entry to calculate <b>sales price</b>,
                                       or with the sales price to calculate the <b>margin</b>.</li>
-        <li><b>Sales price (£):</b>   Enter a sales price to calculate the <b>margin.  OR:</b>.</li>                              
+        <li><b>Sales price (£):</b>   Enter a sales price to calculate the <b>margin.</b>.</li>                              
         <li><b>Margin (%):</b>        Enter a margin % to calculate the <b>sales price</b>, from the cost price.</li>
         <li><b>Net (£):</b>           This is a calculated field for display only. It shows the calculated net value of the line
                                       (sales price * qty).</li>
-        <li><b>Tax code:</b>          Select a tax codd from the drop-down list. This will be used to calculate VAT on the line.
+        <li><b>Tax code:</b>          Select a tax code from the drop-down list. This will be used to calculate VAT on the line.
                                       The default is set to T1 - 20%. This can be edited.</li>
         <li><b>VAT (£):</b>           This is a calculated field. It shows the value of VAT.</li>
         <li><b>Total (£):</b>         This is a calculated field. It shoes the total value of the line.</li>
@@ -158,7 +159,7 @@ title: Quotes
       </ul>
     </p>
     <BR>
-    <p><b> N.B. Once any items have been entered, the quote can be saved at any time by pressing the <b>Save Button</b>.
+    <p><b> N.B. Once any items have been entered, the quote can be saved at any time by pressing the Save Button.
         This should be done frequently to minimise the chance of data loss. </b></p>
      <br>
         <img src="img/Save_Button.PNG" style="width: 10%; height: 10%">
@@ -167,10 +168,10 @@ title: Quotes
     <h4 id="terms-tab"><b>Terms</b></h4>
 
     <p>The Terms screen gives you the opportunity to enter text that will appear at the end of the quote. 
-    You can access products that have been marked as text items, and pull through their associated text or simply
-    key in text lines. 
-    Terms can then be displayed separately from the items, at the end of your quote reports.
-    A typical example of Terms would be Payment Terms.</p>
+       It provides the ability to store different terms or comments in Products and then select them from the drop down menu. 
+       You can access products that have been marked as text items, and pull through their associated text or simply key in text lines. 
+       Terms can then be displayed separately from the items, at the end of your quote reports. 
+       A typical example of Terms would be Payment Terms.</p>
     <br>
       <img src="img/Quotes_Terms.PNG" style="width: 100%;">
     <br> <br>
@@ -197,11 +198,11 @@ title: Quotes
       <li><b>Ref:</b>             A text reference for the quote.</li>
       <li><b>Ex ref:</b>          An external text reference for the quote.</li>
       <li><b>Classification:</b>  Select from a drop-down box of different types of job / work records.
-                                  This links to the Classification field for a job.</li>
+                                  This links to the Classification field for a job, once an order is placed.</li>
       <li><b>Job analysis:</b>    Select from a drop-down box of different types of job analysis.
-                                  This links to the Job Analysis field for a job.</li>
+                                  This links to the Job Analysis field for a job, once an order is placed.</li>
       <li><b>Project manager:</b> Select from a drop-down box of different managers responsible for the job.
-                                  This links to the Project Managers field for a job.</li>
+                                  This links to the Project Managers field for a job, once an order is placed.</li>
     </ul></p>
 
     <h4 id="notes-tab"><b>Notes</b></h4>
@@ -234,7 +235,6 @@ title: Quotes
       <img src="img/Quotes_CreateInvoice.PNG" style="width: 100%;">
     <br> <br>
     <p>Once a quote has been converted to an order and attached to a contract, it can be invoiced
-    using the <b></b>invoice</b> button (circled in red). This will create an invoice record in CM50, and optionally, in Sage. 
-    Once a quote has been invoiced, it can no longer be re-assigned to a different contract.</p>
+    using the <b></b>invoice</b> button (circled in red). This will create an invoice record in CM50, and post to Sage. </p>
   </div>
 </div> 
