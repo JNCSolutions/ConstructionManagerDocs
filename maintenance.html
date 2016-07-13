@@ -46,8 +46,8 @@ title: Maintenance
         <li>Job Instructions</li>
         <li>Custom Fields to accomodate specific user requirements</li>
         <li>Allocate engineers to do the job</li>
-        <li>Send job instructions automatically to mobile manager</li>
-        <li>Atomating sales invoicing, e.g.</li>
+        <li>Send job instructions automatically to Mobile Manager</li>
+        <li>Automating sales invoicing, e.g.</li>
         <ul>
           <li>Preview list of jobs to invoice</li>
           <li>One invoice per job</li>
@@ -73,53 +73,62 @@ title: Maintenance
       <p>This displays a list of all maintenance jobs on your system. 
           The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>.</p>
       <br> <br>
-      <h4 id="new-mjob">New Maintenance Job</h4>
+      <h4 id="new-mjob">New/Edit Maintenance Job</h4>
       <p>To create a new job, click on the <b>New</b> button. 
           This will open the following screen, under the details>job information tab:.
           This data is used by the office, rather than the on-site engineer.</p>
       <p><b>N.B.</b> Jobs are also often created from the <b>Quotes</b> module - 
-            see <a href="quotes.html">Quotes.</a> Either way, the screen below is displayed.</p>
+            see <a href="quotes.html">Quotes.</a> In that cae, highlight a line and click on the <b>Edit</b> button.
+            Either way, the screen below is displayed.</p>
       <br>
       <img src="img/Maintenance_Create_01.PNG" style="width: 100%;">
       <p>Data to be entered includes:</p>   
       <ul>
           <li><b>Contract:</b> Select a contract no. from the drop down box. 
           Typically, you will create an "umbrella" contract no. for all small maintenance jobs, 
-          or one contract for all maintenance jobs for one (larger) customer.</li>
+          or one contract for all maintenance jobs for one (larger) customer.
+          We recommend that you discuss the setup of this with our training scheme before starting the system.</li>
           <li><b>Customer:</b> Select a customer from the drop down box of Sage customers.</li>
           <li><b>Site address:</b> Select a site address from the drop down box.
-                You can create a new address here.</li>
+                You can create a new address here with the + button or edit an address with the pencil button.</li>
           <li><b>M-job no.:</b> This is auto-created by the system. 
-                  The starting point and format of the job no.s can be set up in (old) Construction Manager, 
+                  The starting point and format of the job no.s can be set up in Construction Manager 50 (desktop version), 
                   under Settings>Maintenance Settings>Maintenance Job No..</li>
           <li><b>Priority:</b> Select a priority from the drop down box. 
-                  These codes can be setup in (old) Construction Manager,
+                  These codes can be setup in Construction Manager 50 (desktop version),
                   under Settings>Maintenance Settings>Priorities.</li>
           <li><b>Create date & time:</b> This defaults to today and now, but you can update it.</li>
           <li><b>Start date & time:</b> This defaults to current date/time plus the priority time, but you can update it.</li>
-          <li><b>Planned completion date & time:</b> Enter the planned completion date & time.</li>
-          <li><b>Completion date & time:</b> Enter the actual completion date & time.</li>
+          <li><b>Planned completion date & time:</b> Enter the planned completion date & time if you have a completion date & time.</li>
+          <li><b>Completion date & time:</b> Enter the actual completion date & time.
+                  Or this can be populated when the invoice is produced. 
+                  Choose setting for this in Construction Manager 50 (desktop version), 
+                  under Settings>Maintenance Settings>Auto Set Completion Dates.</li>
           <li><b>Status:</b> Select a status from the drop down box.</li>
           <li><b>Description:</b> Enter a short job description - this will appear on lists and reports.</li>
           <li><b>Sales type:</b> Select a sales type from the drop down box. The different types are as follows:</li>
               <ul>
-                <li><b>Authorised Price:</b> Creates an invoice from an entered M-job value.</li>
+                <li><b>Authorised Price:</b> Creates an invoice from the amount entered M-job value.</li>
                 <li><b>Product Invoice:</b> Creates an invoice from product data entered on the Sales>Product Invoice tab.</li>
                 <li><b>Quote Invoice:</b> Creates an invoice from quote data entered in the Quotes module.</li>
-                <li><b>Cost Plus Markup:</b> Creates an invoice from the entered costs 
-                      (purchase orders, labour timesheets etc.) and transaction markups (on the defaults tab).</li>
-                <li><b>Schedule of Rates:</b> .</li>
+                <li><b>Cost Plus Markup:</b> Creates an invoice from the entered cost transactions 
+                      (purchase orders, labour timesheets etc.) and applies an Mjob markup (on the defaults tab).</li>
+                <li><b>Schedule of Rates:</b> Enables shedules of rates to be selected by code to build up the invoice price
+                        Schedules can be imported from Excel in Construction Manager 50 (desktop version) 
+                        under Maintenance>SOR>New>Import.</li>
               </ul>
           <li><b>M-job value:</b> You can only enter a value here if the sales type was selected as "Authorised Price".
-                  If any other sales types were selected, the value field is protected.</li>
+                  If any other sales types were selected, the value field is protected 
+                    and calculated from the data entered.</li>
           <li><b>Project Manager:</b> Select a Project Manager from the drop down box.
-                  The project manager field is maintained in (old) Construction Manager, as a tick box on the list of employees.</li>
-          <li><b>Customer/Branch Address:</b> Select an address from the drop down box.
+                  The project manager field is maintained in Construction Manager 50 (desktop version),
+                  as a tick box on the list of employees.</li>
+          <li><b>Customer/Branch Address:</b> Optionally, select an address from the drop down box.
                   This is used where a (larger) customer has several branch addresses. It does not relate to the site address.</li>
           <li><b>Instructions:</b> Enter more detailed instructions about the job.
                   This may be more detailed than the short description.</li>
           <li><b>Work Carried Out:</b> This data will be entered when the job is in progress or completed.
-                  It should appear on the sales invoice.</li>  
+                  It is often used to show on the sales invoice.</li>  
       </ul>
       <p><b>N.B. Don't forget to keep saving your data - click the "Save" button - circled in red above at top right.</b></p> 
       <p>When you click <b>Save</b>, you may be presented with a screen as below. 
