@@ -1,1 +1,621 @@
-
+---
+layout: default
+title: Maintenance
+---
+<div>
+  <p>This module enables you to create, modify and monitor your maintenance jobs.</p>
+  
+  <h3>Contents</h3>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#maintenance-jobs">Maintenance Jobs</a></li>
+      <ul>
+        <li><a href="#new-mjob">New/Edit Maintenance Job</a></li>
+          <ul>
+            <li><a href="#transactions">Job Costing Transactions</a></li>
+          </ul>
+        <li><a href="#new-visit">New/Edit Visit</a></li>
+        <ul>
+          <li><a href="#attachments">Attachments</a></li>
+        </ul>
+        <li><a href="#invoice">Invoice</a></li>
+        <ul>
+          <li><a href="#authorized-price">Authorized Price</a></li>
+          <li><a href="#product-invoice">Product Invoice</a></li>
+          <li><a href="#quote-invoice">Quote Invoice</a></li>
+          <li><a href="#schedule-of-rates">Schedule of Rates</a></li>
+          <li><a href="#cost-plus-mark-up">Cost plus Mark Up</a></li>
+        </ul>
+        <li><a href="#group-invoice">Group Invoice</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
+      <li><a href="#maintenance-progress">Maintenance Progress (Job Costing)</a></li>
+      <li><a href="#visit-list">Visit List</a></li>
+      <li><a href="#equipment-register">Equipment Register</a></li>
+      <ul>
+        <li><a href="#equipment-setup">Setup</a></li>
+        <ul>
+          <li><a href="#equipment-record-service-plans">Service Plans</a></li>
+          <li><a href="#equipment-record-equipment-types">Equipment Types</a></li>
+          <li><a href="#equipment-record-equipment-statuses">Equipment Statuses</a></li>
+          </ul>
+        <li><a href="#equipment-new-edit">New/Edit Equipment</a></li>
+        <ul>
+          <li><a href="#equipment-record-new">New</a></li>
+          <li><a href="#equipment-record-batch-import">Batch and Import</a></li>
+          <li><a href="#equipment-record-service-plans-attach">Service Plans</a></li>
+          <li><a href="#equipment-record-service-history">Service History</a></li>
+          <li><a href="#equipment-record-secondary-equipment">Secondary Equipment</a></li>
+        </ul>
+          <li><a href="#equipment-os-service-plans">Outstanding Service Plans</a></li>
+      </ul>
+      <li><a href="#site-addresses">Site Addresses</a></li>
+      <li><a href="#gps-tracking">GPS Tracking</a></li>
+    </ul>
+    <br>
+    <h3 id="introduction">Introduction</h3>
+      <p>The Maintenance module has been designed to provide specific functionality for small maintenance types of work. 
+      For example:</p>
+      <ul>
+        <li>Job Details logged as they come in (Helpdesk)</li>
+        <li>Automatic Job Numbering</li>
+        <li>Priorities and Status Monitering</li>  
+        <li>Job Instructions</li>
+        <li>Custom Fields to accommodate specific user requirements</li>
+        <li>Allocate engineers to do the job</li>
+        <li>Send job instructions automatically to Mobile Manager</li>
+        <li>Automating sales invoicing, e.g.</li>
+        <ul>
+          <li>Preview list of jobs to invoice</li>
+          <li>One invoice per job</li>
+          <li>Many jobs on one invoice</li>
+          <li>Emailing Invoices</li>
+        </ul>
+        <li>5 Invoice methods:</li>
+        <ul>
+          <li>Authorised price</li>
+          <li>Product invoice</li>
+          <li>Quote invoice</li>
+          <li>Cost plus markup</li>
+          <li>Schedule of rates</li>
+        </ul>
+      </ul>
+      <br>
+      
+      <h3 id="maintenance-jobs">Maintenance Jobs</h3>
+      <p>To access Maintenance, select the Maintenance>Maintenance Jobs tab on the main menu. 
+          This will open the following screen:</p>
+      <br>
+      <img src="img/Maintenance_List_01.PNG" style="width: 100%;">
+      <p>This displays a list of all maintenance jobs on your system. 
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>.</p>
+      <br> <br>
+      <h4 id="new-mjob"><b>New/Edit Maintenance Job</b></h4>
+      <p>To create a new job, click on the <b>New</b> button. 
+          This will open the following screen, under the details>job information tab.
+          This data is used by the office, rather than the on-site engineer.</p>
+      <p><b>N.B.</b> Jobs can also be created from the <b>Quotes</b> module - 
+            see <a href="quotes.html">Quotes.</a> In that case, highlight a line and click on the <b>Edit</b> button.
+            Either way, the screen below is displayed.</p>
+      <br>
+      <img src="img/Maintenance_Create_01.PNG" style="width: 100%;">
+      <p>Data to be entered includes:</p>   
+      <ul>
+          <li><b>Contract:</b> Select a contract no. from the drop down box. 
+          Typically, you will create an "umbrella" contract no. for all small maintenance jobs, 
+          or one contract for all maintenance jobs for one (larger) customer.
+          We recommend that you discuss the setup of this with our training scheme before starting the system.</li>
+          <li><b>Customer:</b> Select a customer from the drop down box of Sage customers.</li>
+          <li><b>Site address:</b> Select a site address from the drop down box.
+                You can create a new address here with the + button or edit an address with the pencil button.</li>
+          <li><b>M-job no.:</b> This is auto-created by the system. 
+                  The starting point and format of the job no.s can be set up in Construction Manager 50 (desktop version), 
+                  under Settings>Maintenance Settings>Maintenance Job No..</li>
+          <li><b>Priority:</b> Select a priority from the drop down box. 
+                  These codes can be setup in Construction Manager 50 (desktop version),
+                  under Settings>Maintenance Settings>Priorities.</li>
+          <li><b>Create date & time:</b> This defaults to today and now, but you can update it.</li>
+          <li><b>Start date & time:</b> This defaults to current date/time plus the priority time, but you can update it.</li>
+          <li><b>Planned completion date & time:</b> Enter the planned completion date & time 
+                  if you have a completion date for the work.</li>
+          <li><b>Completion date & time:</b> Enter the actual completion date & time,
+                  or this can be populated when the invoice is produced. 
+                  Update the setting for this in Construction Manager 50 (desktop version), 
+                  under Settings>Maintenance Settings>Auto Set Completion Dates.</li>
+          <li><b>Status:</b> Select a status from the drop down box.</li>
+          <li><b>Description:</b> Enter a short job description - this will appear on lists and reports.</li>
+          <li><b>Sales type:</b> Select a sales type from the drop down box. The different types are as follows:</li>
+              <ul>
+                <li><b>Authorised Price:</b> Creates an invoice from the amount entered in M-job value.</li>
+                <li><b>Product Invoice:</b> Creates an invoice from product data entered on the Sales>Product Invoice tab.</li>
+                <li><b>Quote Invoice:</b> Creates an invoice from quote data entered in the Quotes module.</li>
+                <li><b>Schedule of Rates:</b> Enables shedules of rates to be selected by code to build up the invoice price
+                      Schedules can be imported from Excel in Construction Manager 50 (desktop version) 
+                      under Maintenance>SOR>New>Import.</li>
+                <li><b>Cost Plus Markup:</b> Creates an invoice from the entered cost transactions 
+                      (purchase orders, labour timesheets etc.) and applies an Mjob markup (on the defaults tab).</li>
+              </ul>
+          <li><b>M-job value:</b> You can only enter a value here if the sales type was selected as "Authorised Price".
+                  If any other sales types were selected, the value field is protected 
+                    and calculated from the data entered.</li>
+          <li><b>Project Manager:</b> Select a Project Manager from the drop down box.
+                  The project manager field is maintained in Construction Manager 50 (desktop version),
+                  as a tick box on the list of employees.</li>
+          <li><b>Customer/Branch Address:</b> Optionally, select an address from the drop down box.
+                  This is used where a (larger) customer has several branch addresses. It does not relate to the site address.</li>
+          <li><b>Instructions:</b> Enter more detailed instructions about the job.
+                  This may be more detailed than the short description.</li>
+          <li><b>Work Carried Out:</b> This data will be entered when the job is in progress or completed.
+                  It is often used to show on the sales invoice.</li>  
+      </ul>
+      <p><b>N.B. Don't forget to keep saving your data - click the "Save" button - circled in red above at top right.</b></p> 
+      <br> <br>
+      
+      <h4 id="edit-mjob"><b>Edit Maintenance Job</b></h4>
+      <br>
+      <img src="img/Maintenance_List_02.PNG" style="width: 100%;">
+      <br>
+      <p>To edit an existing job, select a job from the list and then click on the appropriate button - circled in red above. 
+          This will open screens in identical format to those used 
+          when <a href="#new-mjob">Creating a New Job.</a></p>
+      <br>
+      <h4><b>Delete Maintenance Job</b></h4>
+      <p>To delete an existing job, select a job from the list and then click on the appropriate button - circled in red above. 
+          You will be asked to confirm your selection. Warning – you cannot retrieve a deleted Maintenance Job. 
+          It is normally better to set the status to Cancelled.</p>
+      <br>
+      
+      <h4><b>Change Status</b></h4>
+      <p>To change status on an existing job, select a job or range of jobs from the list 
+            and then click on the <b>Change Status</b> button - circled in red above. 
+            This will open screens as shown below.</p>
+      <br>
+      <img src="img/Maintenance_Change_Status_03.PNG" style="width: 50%;">
+      <br>
+      <p>The following options are available:</p>
+      <ul>
+        <li>Choose a job or range of jobs - top radio button.</li>
+        <li>Choose all jobs on the list, selected by the list filters - middle radio button.</li>
+        <li>Choose all jobs on the list, ignoring the filters - bottom radio button.</li>
+      </ul>
+      <p>A second selection screen will then be displayed, where you can select the job status that you want your
+             selected jobs to change to. Click <b>OK</b> or <b>Cancel</b>.</p>
+      <br>
+      <h4 id="transactions"><b>Job Costing Transactions</b></h4>
+          <p>View <b>Transactions</b> relating to this M-job by clicking on the appropriate tabs - circled in red below. 
+          This will open the following profit and loss screen for the selected job:
+          <br> <br>
+      <img src="img/Maintenance_Create_05.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Then click on the <b>Activity</b> tab - circled in red below.
+          This will display the following screen:</p> 
+          <br>
+      <img src="img/Maintenance_Create_06.PNG" style="width: 100%;">
+      <p>This shows any transactions that have been entered, from a variety of sources. 
+          In this case, we are seeing some labour, materials and purchase order activity, 
+          that have been entered against the job.</p> 
+      <br> <br>
+      
+      <h4 id="new-visit"><b>New Visits for Engineers</b></h4>
+      <p>To allocate an engineer to a job, you need to select the <b>Visit Information Tab</b> 
+          - circled in red below at top left. This will open the following screen:
+          <br> <br>
+      <img src="img/Maintenance_Create_02.PNG" style="width: 100%;">
+      <p>On this screen, you can perform the following functions:</p> 
+        <ul>
+          <li>Create visits from a drop down list of engineers.</li>
+          <li>Create and update data about visits on the 4 tabs circled in red, top right.</li>
+          <li>Create planner appointments by entering planned start and end dates and times,
+              and clicking the <b>Create Planner Appointment</b> button, circled in red, bottom right.</li>
+        </ul>
+        <p><b>N.B. Visits</b> can also be created in the <a href="planner.html">Planner</a> module. 
+                  The visit will then appear in the visit information tab. 
+                  It should be created in one place or the other, but not both.</p>   
+      <br>
+      <h4 id="attachments"><b>Attachments</b></h4>
+      <p>You can add <b>Attachments</b> by clicking on the appropriate tab - circled in red below at top left. 
+          This will open the following screen:
+          <br> <br>
+      <img src="img/Maintenance_Attachments_01.PNG" style="width: 100%;">
+      <br> <br>
+      <p>This screen is split in half:</p> 
+      <ul>
+        <li><b>On the left:</b> A list of directories is created by the software.
+                These are created as each Mjob and visit is created, and named after the job and engineer.
+                New or additional directories can be created, using the buttons at bottom left.</li>
+        <li><b>On the right:</b> A list of attachments in the selected directory. 
+                These may have been imported by the office for the engineer's use (e.g. a worksheet),
+                or uploaded automatically from Mobile Manager (e.g. a photo or signature).
+                These attachments can be manipulated using the buttons underneath.</li>
+      </ul> <br>
+         
+      <h4><b>Notes</b></h4>
+      <p>You can use <b>Notes</b> to record details or telephone calls about a job 
+          by clicking on the appropriate tab - circled in red below at top left. This will open the following screen:
+          <br> <br>
+      <img src="img/Maintenance_Create_04.PNG" style="width: 100%;">
+      <p>Type a note in the main box, and then click the <b>Add Note</b> button - circled in red above at bottom right.
+          Notes already entered are displayed under the note entry box.</p>     
+      <br> <br>
+      <h4 id="invoice"><b>Invoice</b></h4>
+      <p>Maintenance Invoices are created from the job record. There are settings which will determine which fields 
+          from the Mjob are loaded into the invoice. These are found in Construction Manager 50 (desktop version) 
+          in Settings>Defaults>Maintenance.
+          There are 5 types of invoice that can be created. These are selected in the sales type.</p>
+          <br> <br>
+      
+      <h4 id="authorized-price">Authorized Price</h4> 
+      <p>This is used for a lump sum price invoice. Enter the value to be invoiced in the Mjob Value.
+          Any field from the Mjob record can be printed on the invoice.
+          Invoice <b>layout</b> design will be required to include the fields you require.
+          We recommend that for this type of invoice you use the <b>work carried out</b> field for the invoice text 
+          and this can be printed on the invoice.</p> 
+          <p>Once the price and details have been entered, the invoice is generated by selecting the invoice button in the Mjob Record 
+              or the Invoice button on the Maintenance Job List.</p>
+          <br>
+      <img src="img/Maintenance_Invoice_Select_02.PNG" style="width: 100%;">
+      <p>This will then prepare data to be invoiced, and display as shown in the screen below:</p>   <br>   
+       <img src="img/Maintenance_Invoice_Select_03.PNG" style="width: 100%;">
+      <br>
+      <p>If you are happy to proceed, click on the <b>Save Invoices</b> button. This will display another prompt:</p> <br> 
+      <img src="img/Maintenance_Invoice_Select_06.PNG" style="width: 50%;">
+       <p>Select an option as required to proceed. A further screen will be displayed, as below:</p>   <br> <br>  
+       <img src="img/Maintenance_Invoice_Select_07.PNG" style="width: 100%;">
+       <p>This is the last stage of invoicing, where you select to <b>Post</b> to Sage - click on button circled in red, top right.
+            Before you post, you can view the product lines, and can update customer information - tabs circled in red, top left.
+            If you do update data, don't forget to save - click on button circled in red, top right. </p>
+      
+      <br> <br>
+      <h4 id="product-invoice">Product Invoice</h4> 
+      <p>Select Sales Type = Product Invoice.  Then select Sales Tab and Product Invoice.  </p>
+      <img src="img/Maintenance_Product_Invoice_01.PNG" style="width: 100%;">
+      <p>In the screen above, the invoice details can be entered as product items, line by line.</p> 
+      <p><b>N.B. Don't forget to keep saving your data - click the "Save" button - circled in red above at top right.</b></p> 
+      <p>When you click <b>Save</b>, you may be presented with a screen as below. 
+         This means that product invoice data lines are incomplete - if you proceed with Save, incomplete lines will not be saved.</p>
+      <img src="img/Maintenance_Save_Warning_01.PNG" style="width: 50%;">  
+      
+      <br> <br> <br>
+      <h4 id="quote-invoice">Quote Invoice</h4> 
+      <p>This invoice type can only be used if you have the Quote module and have created the Mjob from a quote. </p>
+      <p>In this case, the invoice type should already be set to quote invoice.
+          Simply press the invoice button and a detailed invoice will be produced from the quote.</p> 
+      
+      <br> <br>
+      <h4 id="schedule-of-rates">Schedule of Rates</h4> 
+      <p>To use this invoice type, you have to have set up <b>Schedule of Rates</b> first.</p>
+      <p>Choose sales type = Schedule of Rates and save.
+          To enter the schedule, go to Sales then select Schedule.
+          In the screen below, you can build the invoice from the selected schedule.
+          Once completed and saved, the invoice is produced in the same way as the other types.</p> 
+          <img src="img/Maintenance_Schedule_Invoice_01.PNG" style="width: 100%;">  
+       
+      <br> <br> <br>
+      <h4 id="cost-plus-mark-up">Cost plus Mark Up</h4> 
+      <p>Before using this invoice type, you may want to update the <b>Default Transaction Markup</b> information for this job, 
+          by clicking on the appropriate tab - circled in red below at top left. 
+          This will open the following screen:  </p> 
+          <img src="img/Maintenance_Create_03.PNG" style="width: 50%;">
+      <p>The default values are stored in Construction Manager 50 (desktop), under Settings>Defaults>Maintenance.</p> 
+      <p>Once the mark up values are correct, the invoice will be produced in the normal way.</p> 
+      
+      <br> <br>
+      <h4 id="group-invoice"><b>Invoice or Group Invoice</b></h4>
+      <p>You can create individual or group invoices from the main maintenance jobs list - 
+          select one of the tabs circled in red below. 
+            This will open a standard selection box as shown below.</p>
+      <br>
+      <img src="img/Maintenance_Invoice_Select_01.PNG" style="width: 100%;">
+      <br>
+      <p>If you select to "Invoice" M-jobs 10021 and 10022 as a current selection, the following screen will be displayed:</p>
+      <br>
+      <img src="img/Maintenance_Invoice_Select_04.PNG" style="width: 100%;">
+      <br>
+      <p>You can see that two seperate invoices have been created, one for each Job.</p>
+      <br>
+      <p>If you select "Group Invoice" M-jobs 10021 and 10022, the following screen will be displayed:</p>
+      <br>
+      <img src="img/Maintenance_Invoice_Select_05.PNG" style="width: 100%;">
+      <br>
+      <p>You can see that one combined invoice has been created, for two Jobs.</p>
+      <br>
+      <p>If you are happy to proceed, click on the <b>Save Invoices</b> button. This will display another prompt:</p> <br> 
+      <img src="img/Maintenance_Invoice_Select_06.PNG" style="width: 50%;">
+      <p>Select an option as required to proceed. A further screen will be displayed, as below:</p>   <br> <br>  
+      <img src="img/Maintenance_Invoice_Select_07.PNG" style="width: 100%;">
+      <p>This is the last stage of invoicing, where you select to <b>Post</b> to Sage - click on button circled in red, top right.
+            Before you post, you can view the product lines, and can update customer information - tabs circled in red, top left.
+            If you do update data, don't forget to save - click on button circled in red, top right. </p>
+            
+            
+      <br> <br>
+      <h4 id="reports"><b>Reports</b></h4>
+      <p>To run a selection of reports on an existing job, select a job from the list 
+            and then click on the <b>Reports</b> button - circled in red below. 
+            This will open a selection box as shown below.</p>
+      <br> 
+      <img src="img/Maintenance_Report_01.PNG" style="width: 50%;">
+      <br> <br>
+      <p>Pick a report from the drop down list, and click the <b>Select</b> button.
+          The report will be displayed in the usual Windows manner - you can then choose to print it.</p>
+      <br>
+      
+      <h3 id="maintenance-progress">Maintenance Progress</h3>
+      <p>Maintenance Progress provides a job costing report screen for selected jobs.
+          To access the Maintenance Progress List, select the Maintenance Jobs tab on the main menu. 
+          Use the search and filter functions to select the jobs you want on your report - 
+          e.g. select complete jobs for the current month.</p>
+      <p>Select the Job Progress tab and the following selection box will be displayed:</p> 
+      <br>
+      <img src="img/Maintenance_Progress_03.PNG" style="width: 100%;">
+      <p>Enter a transaction date range. 
+      <b>N.B.</b> - this is the date range for the transaction costs and sales for the report.
+      This is different to the date selection on the Maintenance job List.  </p>    
+      <p>Click OK, and a new list will be displayed of all maintenance jobs on your system, 
+          showing data that relates to the financial status of the job.
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>  </p>
+      
+      <br>  <br>
+      <h3 id="visit-list">Visit List</h3>
+      <p>To access the Visit List, select the Maintenance>Visit List tab on the main menu. 
+          This will open the following screen:</p>
+      <br>
+      <img src="img/Maintenance_Visit_List_01.PNG" style="width: 100%;">
+      <br> <br>
+      <p>This displays a list of all visits on your system. 
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>
+          The following options are available from this list:</p>
+      <ul>
+        <li>Double click on a visit - this will bring up the Maintenance Job that the visit is attached to,
+            and you can then update the job, in the same manner as via <a href="#new-mjob">New/Edit Maintenance Job</a>.</li>
+        <li>Change status - click on the tab as circled in red above. You can then change the status on selected rows 
+        via two selection boxes.</li>  
+      </ul>
+      <br> <br>
+        
+      <h3 id="equipment-register">Equipment Register</h3>
+      <p>The Equipment Register allows you to maintain a list of equipment, such as air conditioning units, 
+          which are located at customers' sites, and associated service plans. </p>
+      <p>To access the Equipment Register, select the Maintenance>Equipment Register tab on the main menu. 
+          This will open the following screen:</p>
+      <br>
+      <img src="img/Maintenance_Equipment_01.PNG" style="width: 100%;">
+      <p>This displays a list of equipment on your system. 
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>.</p>
+      <br> 
+      
+      <h4 id="equipment-setup"><b>Setup</b></h4>
+      <p>First you need to do some system setup. </p>
+      <br>
+      <h4 id="equipment-record-service-plans"><b>Service Plans</b></h4>
+      <p>To access Service Plans, select the Equipment>Service Plans tab. 
+        The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_06.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Here you can add or edit Service Plans, by clicking on one of the highlighted tabs. </p>
+       The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_07.PNG" style="width: 100%;">
+      <br> <br>
+      <p>The following data needs to be entered: 
+      it will be used as defaults when a Service Plan is attached to a unit of equipment.</p>
+          <ul>
+            <li><b>Service Description:</b> Enter the description of the service plan.</li>
+            <li><b>Service Requirements:</b> Enter the technical details of the service.</li>
+            <li><b>Service Interval:</b> Enter the number and time unit (weeks/months etc.) of the service plan interval.</li>
+            <li><b>Service Duration:</b> Enter the no. of hours duration.</li>
+            <li><b>Maintenance Job Status:</b> Enter the status from the drop down list.
+                    This is the status that will be attached to the M-job when it is created.</li>
+            <li><b>Custom Forms:</b> Check the <b>In Use</b> box if any Custom Forms are to used on this plan.</li>
+          </ul>              
+          <p><b>N.B.</b> Don't forget to save your data - click on the <b>Save</b> button.</p>
+      <br>
+      <p>Records can be deleted in the usual way, by selecting the <b>Delete</b> tab and then confirming.</p>
+        <br> <br>
+        
+      <h4 id="equipment-record-equipment-types"><b>Equipment Types</b></h4>
+      <p>To access Equipment Types, select the Equipment Types tab. 
+        The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_04.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Here you can add or delete Equipment types.</p>   
+      <br> <br>
+      <h4 id="equipment-record-equipment-statuses"><b>Equipment Statuses</b></h4>
+      <p>To access Equipment Statuses, select the Equipment Statuses tab. 
+        The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_05.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Here you can add or delete Equipment statuses.
+          You can hide units of equipment on subsequent displays by checking the <b>Hidden</b> option. </p>   
+      <br> <br>
+       
+      <h4 id="equipment-new-edit"><b>New/Edit Equipment</b></h4>
+      <p>Now you are ready to create or edit equipment records: </p>
+      <br> 
+      <h4 id="equipment-record-new"><b>New</b></h4>
+      <p>To create a new equipment record, click on the <b>New</b> button. 
+          This will open the following screen, under the Equipment>New tab.
+          Alternatively, double-click on an existing record to edit.</p>
+      <p>The first screen to be updated is displayed as follows:</p>
+      <img src="img/Maintenance_Equipment_02.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Data to be entered includes:</p>   
+      <ul>
+          <li><b>Name:</b> Enter the name of the unit.</li>
+          <li><b>Make:</b> Enter the make of the unit.</li>
+          <li><b>Model:</b> Enter the model of the unit.</li>
+          <li><b>Serial No.:</b> Enter the serial no. of the unit.</li>
+          <li><b>Job No.:</b> Enter a job no. from the drop down llist.
+                When a service plan creates a maintenance job, this is the job no. that will be used.</li>
+          <li><b>Customer:</b> Enter the customer from the drop down list. This is the customer that has the equipment.</li>
+          <li><b>Location Description:</b> Enter the description of the location that houses the unit.</li>
+          <li><b>Type:</b> Enter the equipment type from the drop down list.</li>
+          <li><b>Status:</b> Enter the equipment status from the drop down list.</li>
+          <li><b>Installation Date:</b> Enter the date that the unit was installed.</li>
+          <li><b>Decommission Date:</b> Enter the date that the unit was decommissioned - if relevant.</li>
+          <li><b>Site Address:</b> Enter the site address from the drop down list.</li>
+          <li><b>Notes:</b> Enter any relevant notes.</li>
+      </ul> 
+      <p><b>N.B.</b> Don't forget to save your data - click on the button circled in red, top right.</p>
+      <br>
+      
+      <h4 id="equipment-record-batch-import"><b>Batch and Import</b></h4>
+      <p>The Batch Entry option gives you a fast method to enter large quantities of new data, 
+          either from a batch entry screen or from an Excel spreadsheet import.</p>
+      <p>To access Batch Entry, select the Equipment>Batch Entry tab. 
+        The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_11.PNG" style="width: 100%;">
+      <br> <br>
+      <p>You can now:</p>   
+        <ul>
+            <li>Manually enter equipment data into the blank rows and click the Save button, <b>OR</b></li>
+            <li>Click the Import button, which will populate the blank rows from a spreadsheet.</li>
+        </ul> 
+        <p>Clicking the Import button will display a screen where you can select a spreadsheet to import from. 
+        Only Excel files with an extension of .xls or .xlsx can be used.</p>
+        <br>
+        <img src="img/Maintenance_Equipment_12.PNG" style="width: 50%;">
+      <br> <br>
+        <p>Select a spreadsheet in the standard Microsoft fashion and click the Import Equipment button. 
+        Another screen will then be displayed.</p>
+        <br>
+        <img src="img/Maintenance_Equipment_13.PNG" style="width: 50%;">
+      <br> <br>
+        <p>You will then be asked for the following details:</p>
+      <ul>
+        <li><b>Which rows would you like to upload?</b> Enter the row no.s you wish to upload. </li>
+        <li><b>Skip first row?</b> If the first row of the spreadsheet contains a text header describing the columns, 
+                select this to avoid treating the column names as data.</li>
+        <li><b>Column assignments:</b> Here you can assign columns from the imported sheet to the expected input fields, 
+        <b>OR</b> click the Template button to assign columns via a template (see below).</li>
+      </ul>
+      <p>Now click the Read Data button. The following screen will be displayed:</p>
+      <br>
+      <img src="img/Maintenance_Equipment_14.PNG" style="width: 100%;">
+      <br> <br>
+      </p>This displays a list of equipment from the spreadsheet, ready to import into the main Equipment Register. 
+          Click on the save button to finish the process. The new Equipment Register will now be re-displayed.</p>
+      <br>
+      <p>After clicking the Template button, the following screen will be displayed:</p>
+      <br>
+      <img src="img/Maintenance_Equipment_15.PNG" style="width: 50%;">
+      <br> <br>
+      <p>This allows you to create, delete or use a selected template for column assignments.</p>
+      <br> <br>
+      
+      
+      <h4 id="equipment-record-service-plans-attach"><b>Service Plans</b></h4>
+      <p>You are now ready to attach service plans to an item of equipmnent. 
+          Select the <b>Service Plans</b> tab on an Equipment Record, 
+          and the following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_03.PNG" style="width: 100%;">
+      <br> <br>
+      <p>This screen is split in two halves:</p>   
+      <ul>
+          <li><b>Left:</b> This displays all the available service plans, which can be attached to a unit of equipment.
+                  To attach a plan to a unit, highlight from the list and click the <b>Apply</b> button.</li>
+          <li><b>Right:</b> This screen will be displayed when a plan is first attached to a unit, or to edit it.
+                  The following data needs to be entered:</li>
+          <ul>
+            <li><b>Service Description:</b> Enter the description of the service plan.</li>
+            <li><b>Service Requirements:</b> Enter the technical details of the service.</li>
+            <li><b>Service Interval:</b> Enter the number and time unit (weeks/months etc.) of the service plan interval.</li>
+            <li><b>Service Duration:</b> Enter the no. of hours duration.</li>
+            <li><b>Maintenance Job Status:</b> Enter the status from the drop down list.
+                    This is the status that will be attached to the M-job when it is created.</li>
+            <li><b>Service Plan Start Date:</b> Enter the start date of the service plan.</li>
+            <li><b>Service Plan End Date:</b> Enter the end date of the service plan, if known.
+                    If not known, leave blank.</li>
+            <li><b>Next Service  Date:</b> Enter the next service date.
+                  This will default to start date plus service interval, but can be over-written.</li>  
+          </ul>              
+      </ul> 
+      <p><b>N.B.</b> Don't forget to save your data - click on the <b>Save</b> button.</p>  
+      <br>
+      <h4 id="equipment-record-service-history"></h4><b>Service History</b></h4>
+      <p>This screen displays a list of completed service jobs for this unit of equipment.</p>
+      <br>
+      <h4 id="equipment-record-secondary-equipment"><b>Secondary Equipment</b></h4>
+      <p>This screen is used to attach sub-units of equipment to a parent unit.</p>
+      <br>
+      <h4><b>Delete</b></h4>
+      <p>To delete an existing equipment record, highlight an existing record and then click on the <b>Delete</b> button. 
+          Confirm your choice and then the record will be deleted.</p>
+      <br> <br>
+      
+      
+      
+      <h4 id="equipment-os-service-plans"><b>Outstanding Service Plans</b></h4>
+      <p>To access Outstanding Service Plans, select the Equipment>Outstanding Service Plans tab. 
+        The following screen will be displayed:</p>
+      <img src="img/Maintenance_Equipment_08.PNG" style="width: 100%;">
+      <br> <br>
+      <p>This screen displays a list of Service Plans that are due (or overdue) to be actioned.
+          Select records that you want to process, and then click the <b>Process Selected Plans</b> tab - 
+          highlighted in red.</p>
+      <p>This process will create Maintenance Jobs for the selected plans 
+          and they will disappear from the Outstanding Plans List. </p>
+      <br> <br>   
+       
+      <h3 id="site-addresses">Site Addresses</h3>
+      <p>This option displays a list of all the available site addresses and allows you to create and edit those addresses.
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a>
+          Access this option via Maintenance>Site Addresses, and the following screen will be displayed:</p>
+      <img src="img/Maintenance_Site_Addresses_01.PNG" style="width: 100%;">
+      <br> <br>
+      <h4><b>New / Edit</b></h4>
+      <p>To create a new address or edit an existing selected address, select the appropriate option from the top of the list 
+          (circled in red above). Either option will bring up the following screen:</p>
+      <img src="img/Maintenance_Site_Addresses_02.PNG" style="width: 100%;">
+      <br> <br>
+      <p>Enter data into the relevant fields. The first line of the address should go into the "Name" field 
+          - this is used for indentification/searching.  <b>N.B. - </b>Don't forget to click on the "Save" button (
+            (circled in red, top right).</p>
+      <br> 
+      <h4><b>Delete</b></h4>  
+      <p>To delete an address, select an address, click on "Delete" and confirm
+          You should not delete an address that has been used on a job, as the address details will be lost.</p>
+      
+      <br> <br>
+      
+    <h3 id="gps-tracking">GPS Tracking - Mobile Manager</h3>
+      <p>This option utilises Google Maps to provide a visual, mapped means of viewing the location of a mobile phone or engineer. 
+          The GPS option must be switched on, on the mobile phone. 
+          Select the GPS Tracking option under Maintenance, and the following screen appears:</p>
+      <br>
+      <img src="img/Maintenance_GPS_Tracking_02.PNG" style="width: 100%;">
+      <br> <br>
+      <p>On this example, 2 selections have been ticked:</p>
+      <ul>
+        <li><b>Site Addresses:</b> This option displays, with purple pin-point markers, 
+                    all the addresses stored on your site address list (see option above).</li>
+        <li><b>Current M-Jobs:</b> This option displays, with green pin-point markers,  all the addresses 
+                of current Maintenance Jobs.</li> 
+      </ul>
+      <p><b>N.B.</b> You can mouse-hover over markers to see the precise address.</p>
+      <br> <br>
+      <p>The next screen shows the other two options that can be used:</p>
+      <br>
+      <img src="img/Maintenance_GPS_Tracking_01.PNG" style="width: 100%;">
+      <br> <br>
+      <p>On this example, 2 selections have been ticked/selected:</p>
+      <ul>
+        <li><b>Engineer Locations:</b> This option displays, with red pin-point markers, 
+                    the location of any engineers with the Mobile Manager app. on their mobile phone.</li>
+        <li><b>Show Engineer Paths:</b> Select this option to show where a selected engineer(s) has been
+                over a selected timeframe. (Again, this runs from the Mobile Manager app.).
+                Select this option and a parameter input box will appear:
+                enter fields as follows, and then click on the <b>Apply</b> button:</li> 
+        <ul>
+            <li><b>Engineer to Show:</b> Select an engineer, or several, from a drop-down list. OR, you can select all engineers.</li>
+            <li><b>Period:</b> Select a period from a list of pre-determined time-frames (e.g. 1 day, 7 days etc.).
+                    OR select a Custom Timeframe.</li>
+            <li><b>Date/Time From/To:</b> Select a specific date/time from/to as an alternative to the pre-determined 
+                    time-frames above.</li>
+            <li><b>Show Route Detail Points:</b> Tick this box to show the details of each location that data was captured from 
+                    (mouse-hover over the marker).</li>
+        </ul>
+      </ul>
+      <br> <br>
+      <br>
+          
+ </div>

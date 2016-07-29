@@ -1,0 +1,152 @@
+---
+layout: default
+title: Labour
+---
+<div>
+  <p>This module enables you to create, modify and monitor timesheets and labour data.</p>
+  
+  <h3><b>Contents</b></h3>
+    <ul>
+      <li><a href="#timesheet-list">Timesheet List</a></li>
+      <ul>
+        <li><a href="#new">New</a></li>
+        <li><a href="#edit">Edit</a></li>
+        <li><a href="#delete">Delete</a></li>
+        <li><a href="#import">Import</a></li>
+        <li><a href="#report">Report</a></li>
+      </ul>
+      <li><a href="#labour-list">Labour List</a></li>
+      <li><a href="#employees">Employees</a></li>
+      <li><a href="#pay-rates">Pay Rates</a></li>
+      
+    </ul>
+    <br> <br>
+      
+    <h3 id="timesheet-list"><b>Timesheet List</b></h3>
+    <p>To access the timesheet list, select the Labour>Timesheet List tab on the main menu. 
+         This will open the following screen:</p>
+      <br>
+    <img src="img/Labour_Timesheet_List_01.PNG" style="width: 100%;">
+    <br>
+    <p>This displays a list of all timesheets entered on your system. 
+          They may have been entered manually, imported from a spreadsheet, or created from the Mobile Manager app..
+          The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a></p>
+    <br> <br>
+    
+    <h4 id="new"><b>New</b></h4>
+    <p>To create a new timesheet, click on the <b>New</b> tab at the top of the screen - circled in red above. 
+         This will open the following screen:</p>
+      <br>
+    <img src="img/Labour_Timesheet_New_01.PNG" style="width: 100%;">
+    <br>
+    <p>Data to be entered at header level includes:</p>
+    <ul>
+      <li><b>Employee:</b> Select from the drop-down list.</li>
+      <li><b>Date:</b> Defaults to today, but should be changed to the week-ending date for the timesheet.</li>
+      <li><b>Set as Default Date:</b> Tick this box if you want every line of the timesheet to default to this date.
+              Leave un-ticked if you want to input multiple dates.</li>
+      <li><b>Details:</b> Enter a description (optional).</li>
+      <li><b>Ref:</b> Enter a reference (optional).</li>
+    </ul>
+    <br>  
+    <p>Now you can enter multiple lines of timesheet data - this includes:</p>
+    <ul>
+      <li><b>M-job:</b> Select from the drop-down list (only shows if Maintenance Manager is licensed).</li>
+      <li><b>Job No.:</b> Select from the drop-down list.</li>
+      <li><b>Tender Code:</b> Select from the drop-down list, if applicable.</li>
+      <li><b>Date:</b> Enter date, or accept the default.</li>
+      <li><b>Week:</b> This is created automatically from the date. If week no. is incorrect, check the start date in  
+              Construction Manager (Desktop Version)>Settings>Defaults.</li>
+      <li><b>Details:</b> Enter details of what work has been done - this will show in Job Costing.</li>
+      <li><b>Rate Description:</b> Select from the drop-down list.</li>
+      <li><b>Rate Value:</b> This will default to the rate held on the Pay Rates table, but can be over-written.</li>
+      <li><b>Hours:</b> Enter hours worked.</li>
+      <li><b>Pay:</b> Calculated from Rate X Hours.</li>
+      <li><b>Factor:</b> Adjustment to allow for the cost of emplyment (e.g. NI and holiday time. 
+              A typical factor would be 1.30, but this is held on the Pay Rates table and can be over-written.</li>
+      <li><b>Cost:</b> Calculated from Pay X Factor.</li>
+      <li><b>ChargeOut:</b> Calculated from Hours X Chargeout Rate stored on the Pay Rates table. 
+              It can be over-written.</li>
+     </ul>
+     <br>   
+    <p>Rows can be added and deleted using the buttons circled in red, bottom left. 
+    Then <b>Save</b> your data, using the Save button, circled in red, top right.</p> 
+    <p><b>N.B.</b> See the section on <a href="settings.html">Access Settings</a> 
+          for information on controlling Payroll data access and visibility.</p> 
+    <br>
+    
+    <h4 id="edit"><b>Edit</b></h4>
+    <p>To edit an existing timesheet, select a line on the timesheet list and then open by either double-clicking 
+        on the line or select the <b>Edit</b> tab at the top of the screen - 
+        circled in red at the top of the main timesheet list screen. 
+        This will open a screen identical to the new timesheet screen.</p>
+    <br>
+    
+    <h4 id="delete"><b>Delete</b></h4>
+    <p>To delete an existing timesheet, select a line on the timesheet list and then click on the 
+        <b>Delete</b> tab at the top of the screen - circled in red at the top of the main timesheet list screen. 
+         This will open a confirmation screen:  click on either the <b>Proceed</b> or <b>Cancel</b> button.</p>
+    <br>
+    
+    <h4 id="import"><b>Import</b></h4>
+    <p>Timesheet data can be imported from an Excel spreadsheet.
+        The data will need to be correctly formatted for the import - contact JNC support for assistance or advice.
+        To import timesheet data, click on the <b>Import</b> tab at the top of the screen - 
+        circled in red at the top of the main timesheet list screen.  
+        This will open the following screen:</p>
+    <br>
+    <img src="img/Labour_Timesheet_Import_01.PNG" style="width: 100%;">
+    <p>Click on the import button - circled in red, bottom left.
+        This will open the following screen, where you can select a timesheet to import, in the usual Microsoft manner:</p>
+    <br>
+    <img src="img/Labour_Timesheet_Import_02.PNG" style="width: 50%;">
+    <p>Having selected a spreadsheet, click on the <b>Import Spreadsheets</b> button to proceed to the following screen:</p>
+    <br>
+    <img src="img/Labour_Timesheet_Import_03.PNG" style="width: 50%;">
+    <br>
+    <p>Here you can either select the source columns from a drop-down list against each column, or use a template. 
+        This will tell the system which columns on the spreadsheet to feed into which columns on the timesheet
+        (they may not be in the same order).</p>
+    <p><b>N.B.</b> Take care to only tick the <b>First Row is Headings</b> box if that is the case, 
+          or you will miss the first row of data. </p>    
+        
+        
+    <p>When you have selected columns, click on the <b>Read Data</b> button, the data will be read from the spreadsheet 
+        and the following screen will be displayed:</p>
+    <br>
+    <img src="img/Labour_Timesheet_Import_04.PNG" style="width: 100%;">
+    <p>This screen displays the imported data: if you need to, you can edit the data at this stage (it is not saved yet).
+        If you are happy with the data, click on the <b>Save</b> button and the data will be saved to the system.</p>
+    <p><b>N.B.</b> in this example, only 1 record will be displayed on the main Timesheet List - select that line for edit, 
+          and the 4 detail lines will be displayed.</p>
+    <br> <br>
+              
+  <h3 id="labour-list"><b>Labour List</b></h3>
+    <p>To access the labour list, select the Labour>Labour List tab on the main menu. 
+         This will open the following screen:</p>
+    <br>
+    <img src="img/Labour_Labour_List_01.PNG" style="width: 100%;">
+    <br>
+    <p>This displays a list of all timesheet data, in detail, entered on your system. 
+        The list can be manipulated in the usual way - see <a href="Manipulating Lists.html">Manipulating Lists.</a></p>
+    <br> <br>        
+    
+  <h3 id="employees"><b>Employees</b></h3>
+    <p>To access the employee list, select the Labour>Employees tab on the main menu. 
+         This will open the following screen:</p>
+    <br>
+    <img src="img/Labour_Employee_List_01.PNG" style="width: 100%;">
+    <br>
+    <p>This displays a list of all emloyees recorded on your system. 
+    <br> <br>       
+    
+    <h3 id="pay-rates"><b>Pay Rates</b></h3>
+    <p>To access the pay rates list, select the Labour>Pay Rates tab on the main menu. 
+         This will open the following screen:</p>
+    <br>
+    <img src="img/Labour_Pay_Rates_01.PNG" style="width: 100%;">
+    <br>
+    <p>This displays a list of all your emloyees' different pay rates. 
+    <br> <br>  
+    
+ </div>
